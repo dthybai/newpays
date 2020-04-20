@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<title></title>
+		<style>
+			 html {
+            font-size: 125%; 
+            /* 20梅16=125% min-font-size:12px bug*/
+           
+        }
+        
+        @media only screen and (min-width: 376px) {
+            html {
+                font-size: 146%!important; /* 30.08梅16=188% */
+            }
+        }
+        @media only screen and (min-width: 416px) {
+            html {
+                font-size: 218%!important; /* 38.88梅16=218% */
+            }
+        }
+        @media only screen and (min-width: 768px) {
+            html {
+                font-size: 250%!important; /* 40梅16=250% */
+            }
+        }
+        body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+            margin: 0;padding: 0;border: 0;font-size: 1em;font: inherit;vertical-align: baseline;font-family: "Source Han Sans SC"}
+        body {font-family: "Source Han Sans SC";font-size: 0.7rem;color: #333;line-height: 0.7rem;width: 100%;background: #eeeeee;height: 100%;}
+        em {font-style: normal}
+        li {list-style: none}
+        a {text-decoration: none;outline: 0;color: #333;}
+       /* .content{margin-top: 1.5rem;}*/
+        .imgIcon{height: 2.2rem; line-height: 2.2rem; text-align: center; padding-top: 0.4rem; border-top: 1px solid #CCCCCC;border-bottom: 2px solid #CCCCCC;}
+        .imgIcon img{height: 1.8rem; text-align: center; }
+        .money{height: 1.6rem; line-height: 1.6rem; font-size: 1.6rem;}
+        .moneyNumber{color: red;}
+        .msgs{line-height: 62px; text-align: center;  height: 62px; color: #ffffff;font-size: 15px; }
+        .imgGif p{line-height: 1.5rem; height: 1.5rem; text-align: left;padding-left: 10px;}
+        .msgC{ margin-top: 0.8rem; height: 2rem;line-height: 2rem;border-top: 1px solid #CCCCCC;font-size: 1rem;}
+        .fontColor{color: #0C8EE6;}
+        .footer{text-align: center;}
+        .footer p{padding-top: 0.3rem;}
+        .btns{height: 1.6rem; line-height: 1.6rem; background: #fff; width: 80%; margin: 0 auto; text-align: center;border-radius: 4px; background: #FF0000; color: #FFFFFF}
+        .videos img{width: 19vh; height: 30vh; margin: 5px auto; }
+        .msg{text-align: center;line-height: 1rem;  color: #041C40; font-weight: 800; font-size: 14px; margin-top: 0.6rem; margin-bottom: 0.75rem;}
+        #qrcode{width:136px; height:136px;margin: 0 auto;}
+        .jqcode_warp{
+        	font-size: 0.8rem;
+		    width: 136px;
+		    height: 146px;
+		    margin: 0 auto;
+
+		    /*background: linear-gradient(to left, #17a2b8, #17a2b8) left top no-repeat, linear-gradient(to bottom, #17a2b8, #17a2b8) left top no-repeat, linear-gradient(to left, #17a2b8, #17a2b8) right top no-repeat, linear-gradient(to bottom, #17a2b8, #17a2b8) right top no-repeat, linear-gradient(to left, #17a2b8, #17a2b8) left bottom no-repeat, linear-gradient(to bottom, #17a2b8, #17a2b8) left bottom no-repeat, linear-gradient(to left, #17a2b8, #17a2b8) right bottom no-repeat, linear-gradient(to left, #17a2b8, #17a2b8) right bottom no-repeat;
+		    background-size: 3px 30px, 30px 3px, 3px 30px, 30px 3px;
+		    border-radius: 4px;*/
+        }
+           .container {
+                text-align: center;
+            }
+            .container h2{
+            	margin-top: 1rem;
+            	height: 1rem;
+            	line-height: 1rem;
+            	font-size: 0.8rem;
+            	color: #FF4500;
+            }
+            .container p{
+                color: #888;
+            }
+            .entersland {
+			    height: 4.1rem;
+			    margin-top: 1rem;
+			    overflow: hidden;
+				background: #FFFFFF;
+			}
+				.cons{width: 16rem; color: #fff; font-size: 0.6rem; margin: 0 12.5px; clear: both;}
+					.cons .two{
+						line-height: 1rem;
+						float: left;
+						width: 70%;
+					}
+					.cons .twos{
+						line-height: 1rem;
+						font-size: 0.4rem;
+						float: left;
+						width: 70%;
+					}
+					.cons .navs{ margin-bottom: 0.5rem; color: #1B2842;float: left; width: 4rem; font-size: 15px; font-family: "Regular"; font-weight: 800; height: 31px; line-height: 31px; background: #EEF1F8; border: 1px solid #DFDFDF; text-align: center; border-radius: 2px;  }
+					.cons .navmsg{color: #1B2842;float: left;width: 8.1rem; height: 31px; line-height: 31px; font-size: 15px; border-top: 1px solid #DFDFDF; font-weight: 800; border-bottom: 1px solid #DFDFDF; padding-left: 15px;}
+					.centers input{border: 1px solid #333 ; width: 124%; height: 1.2rem; background:#fff; outline:none; border-radius: 5px; text-align: center;}
+					
+					
+				.cons .three {
+							float: left;
+							width: 60px;
+							height: 31px;
+							line-height: 31px;
+						    border-radius: 2px;
+						    color: #FFFFFF;
+						    text-align: center;
+						    font-size: 15px;
+						    background: #017AFF;
+					}
+					.cons p{display: inline-block;}
+					.consA{width: 100%;line-height: 1.4rem; color: #fff; font-size: 0.6rem;}
+					.consA .two{
+						line-height: 1rem;
+						float: left;
+						width: 70%;
+					}
+					.consA .twos{
+						line-height: 1rem;
+						font-size: 0.4rem;
+						float: left;
+						width: 70%;
+					}
+					
+					.consA .navs{color: #70718e;width: 22%; }
+					.consA .navmsg{color: #000000; font-weight: 700; float: left;}
+					.centers input{border: 1px solid #333 ; width: 124%; height: 1.2rem; background:#fff; outline:none; border-radius: 5px; text-align: center;}
+					.consA {position: relative;}
+					   #input {position: absolute;top: 0;left: 0;opacity: 0;z-index: -10;}
+					   .consA {position: relative;}
+				.consA .threeA {
+					font-size: 12px;
+					      display: inline-block;
+					}
+					.timeout{text-align: center; color: #818d9f; height: 1.8rem; line-height: 1.6rem;font-size: 16px;}
+					.timeout span{color: #ff612a;}
+					.titles{margin: 0px 12.5px;}
+					.titles h4{ color: #DB663C; font-size: 13px; font-weight: 800;line-height: 1.25rem;margin-top: 0.6rem;}
+					.titles p{ font-size: 12px; color: #DB663C;line-height: 0.925rem;margin-bottom: 5px; margin-top: 5px;}
+					
+					.danger{height: 5rem; background: url(bgmsg.png); background-size: 100% 100%;}
+					
+					.danger h4{font-size: 18px; line-height: 7rem; color: #7c5412;  text-align: center;}
+					.moneycontent{
+						height: 9rem;
+						background-image: url(money.png);
+						background-size: 100% 100%;
+						position: relative;
+					}
+					.consB{text-align: center; font-size: 14px;color: #DB663C;height: 2rem; line-height: 2rem; background: #F6E2AD; font-family: "PingFang SC Heavy"; font-weight: 800;}
+					.codeContent{height: 18.75rem; width:94%; background: #FFFFFF; z-index: 1; position: absolute;  left: 50%; top:8.5rem; transform: translate(-50%);}
+					
+					.codeFont{font-size: 12px; color: #D9A668; text-align: center; line-height:1.65rem;}
+					.msgtitle{ font-size: 14px; font-weight: bold; color: #041C40; margin: 0 0.75rem; margin-top: 1.45rem; line-height: 1rem; text-align: center;}
+       				.radiation{height: 10px; border-radius: 5px; background: #066AD9; z-index: 1; position: absolute;  left: 50%; top:8.2rem; transform: translate(-50%); width: 95%;}
+        			.moneycontent img{display:block; margin: 0 auto; width: 34px; height: 36px;padding-top: 1.35rem;}
+        			.moneycontent h3{text-align: center; padding-top: 13px; font-size: 17px; color: #FFFFFF;}
+        			.msgtittle {
+					    text-align: center;
+					    font-size: 14px;
+					    color: #1B2842;
+					    margin-top: 1.5rem;
+					    line-height: 1rem;
+					    margin-bottom: 5px;
+					}
+					#textsThr {
+					    margin: auto;
+					    color: #DB663C;
+					    font-size: 25px;
+					    text-align: center;
+					    font-family: "DIN Alternate Bold";
+					    line-height: 2rem;
+					    height: 2rem;
+					}
+					#textsThrs {
+					    margin-left: 0.9rem;
+					    color: #017AFF;
+					    font-size: 14px;
+					}
+					.lines{border: 1px dashed #DFDFDF; margin-top: 0.8rem; margin: 7.5px;}
+		</style>
+	</head>
+	<body>
+				<div class="consB">
+			  		请在<span>08:20</span>内支付，否则无效
+			  	</div>
+		<div class="content">
+			<div class="moneycontent">
+				<img src="moneybag.png"/>
+				<h3>待付款订单</h3>
+			 </div>
+		</div>
+			<div class="radiation"></div>
+			<div class="codeContent">
+				<div class="msgtittle">支付金额</div>
+					<div class="money">
+				       <div class="consA">
+					  		<p class="navmsgA" id="textsThr">1500.00<span class="threeA" id="textsThrs" onclick="copysTwo()">复制</span></p>
+					  	</div>
+				  	</div>
+				  	<div class="lines"></div>
+			<div class="entersland"> 
+		       	<div class="cons">
+		                    <p class="navs">账号：</p><p class="navmsg" id="textsTwo">3232 3232 3232 3232</p>
+		                    <p class="three" onclick="copyContentOne()">复制</p>
+		        </div>
+		        <div class="cons">
+		                    <p class="navs">姓名：</p><p class="navmsg" id="textsOne">谢</p>
+		                    <p class="three" onclick="copyContent()">复制</p>
+		       	</div>
+			 </div>
+			 <div class="titles">
+			 	<h4>注意</h4>
+			 	<p>1. 修改支付金额不到账（出现损失自行承自行承担),按照指定金额支付成功后返点千1(支付宝/微信转账手续费损耗千1),如提示阻断风险可使用银行卡转账100%成功(无手续费损耗)</p>
+				<p>2. 建议使用银行卡转账可收益千1</p>
+			 </div>
+			</div>
+			 
+	</div>
+	</body>
+	<script src="qrcode.js"></script>
+	<script src="jquery.min.js"></script>
+	<script src="index.js"></script>
+	<link rel="stylesheet" type="text/css" href="layer(1).css"/>
+	<script src="layer.js"></script>
+	
+</html>
